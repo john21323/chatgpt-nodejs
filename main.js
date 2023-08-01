@@ -38,9 +38,10 @@ bot.on("message", async (msg) => {
       parse_mode: "Markdown",
     });
   } catch (error) {
-    await bot.editMessageText(`Got some error: ${JSON.stringify(error)}`, {
+      await bot.editMessageText(`The system is maintain, please try again`, {
       chat_id: chatId,
       message_id: ping.message_id,
     });
+    console.log(error);
   }
 });
